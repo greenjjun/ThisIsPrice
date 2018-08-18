@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.regex.Pattern;
 
 public class PriceFragment extends Fragment {
 
@@ -60,6 +63,11 @@ public class PriceFragment extends Fragment {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (!Pattern.matches("^[0-9]*&", editPrice.getText())) {
+                    // showToast
+                    Toast.makeText(activity, "가격을 정확하게 입력해주세요", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 activity.getPriceData().setPrice(Integer.parseInt(editPrice.getText().toString()));
                 activity.getPriceData().setShipping(Integer.parseInt(editShipping.getText().toString()));
                 activity.getPriceData().setAddress(txtAddress.getText().toString());
