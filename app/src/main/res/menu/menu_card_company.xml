@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/cc_SH"
+        android:title="신한"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/cc_LO"
+        android:title="롯데"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/cc_KB"
+        android:title="국민"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/cc_CI"
+        android:title="씨티"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/cc_SA"
+        android:title="삼성"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/cc_HY"
+        android:title="현대"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/cc_WO"
+        android:title="우리"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/cc_NH"
+        android:title="농협"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/cc_HA"
+        android:title="하나"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/cc_BC"
+        android:title="BC"
+        app:showAsAction="ifRoom"
+        />
+</menu>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/brand_VISA"
+        android:title="VISA"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/brand_MASTER"
+        android:title="MASTER"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/brand_AMEX"
+        android:title="AMEX"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/brand_Maestro"
+        android:title="Maestro"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/brand_JCB"
+        android:title="JCB"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/brand_BC"
+        android:title="BCG"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/brand_Unionpay"
+        android:title="Unionpay"
+        app:showAsAction="ifRoom"
+        />
+
+
+
+</menu>

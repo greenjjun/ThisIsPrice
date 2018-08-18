@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/address_OR"
+        android:title="OR"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/address_DE"
+        android:title="DE"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/address_NJ"
+        android:title="NJ"
+        app:showAsAction="ifRoom"
+        />
+</menu>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        android:textSize="50dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="결제 금액"
+        android:textSize="40sp"
+        android:layout_below="@+id/txt_result"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/won"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0원"
+        android:layout_below="@+id/price"
+        android:layout_centerHorizontal="true"
+        android:textSize="70sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/list_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/won"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="물품 금액"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/txt_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0원"
+            android:textSize="30sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/list_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/list_price"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="관부가세"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/txt_custom_tax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0원"
+            android:textSize="30sp"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
