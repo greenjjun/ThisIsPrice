@@ -12,7 +12,7 @@ public class APIClient {
         OkHttpClient client = new OkHttpClient.Builder().build();
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://earthquake.kr/")
+                .baseUrl("https://api.manana.kr/exchange/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();

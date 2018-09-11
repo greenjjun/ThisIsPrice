@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -42,12 +44,17 @@ public class ResultFragment extends Fragment {
         // Okhttp: HTTP Client를 만들어주는 라이브러리
         // Gson: Json을 자바 클래스로 파싱해주는 라이브러리
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-        Call<Exchange> call = apiInterface.getExchange();
-        call.enqueue(new Callback<Exchange>() {
+        Call<List<ExchangeData>> call = apiInterface.getExchange();
+        call.enqueue(new Callback<List<ExchangeData>>() {
             @Override
-            public void onResponse(Call<Exchange> call, Response<Exchange> response) {
-                Exchange exchange = response.body();
-                double krw = exchange.getUSDKRW();
+            public void onResponse(Call<List<ExchangeData>> call, Response<List<ExchangeData>> response) {
+                List<ExchangeData> exchange = response.body();
+                double krw = 0;
+                for (ExchangeData data : exchange) {
+                    if(data.getName().equals("USDKRW=X")) {
+                        krw = data.getRate();
+                    }
+                }
 
                 PriceData priceData = activity.getPriceData();
                 int productPrice = priceData.getProductPrice(krw);
@@ -59,11 +66,11 @@ public class ResultFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<Exchange> call, Throwable t) {
+            public void onFailure(Call<List<ExchangeData>> call, Throwable t) {
                 txtProductPrice.setText("0원");
                 txtCustomTax.setText("0원");
                 txtWon.setText("0원");
-                Log.d("ResultFragment", "Fail!");
+                t.printStackTrace();
             }
         });
     }

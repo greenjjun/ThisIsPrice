@@ -63,8 +63,7 @@ public class PriceFragment extends Fragment {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!Pattern.matches("^[0-9]*&", editPrice.getText())) {
-                    // showToast
+                if (!Pattern.matches("^[0-9]*$", editPrice.getText())) {
                     Toast.makeText(activity, "가격을 정확하게 입력해주세요", Toast.LENGTH_SHORT).show();
                     return;
                 }

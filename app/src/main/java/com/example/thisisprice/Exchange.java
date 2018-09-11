@@ -4,9 +4,18 @@ import java.util.List;
 
 public class Exchange {
 
-    private List<Double> USDKRW;
+    List<ExchangeData> exchangeDatas;
 
-    public double getUSDKRW() {
-        return USDKRW.get(0);
+    public List<ExchangeData> getExchangeDatas() {
+        return exchangeDatas;
+    }
+
+    public double getUSD() {
+        for (ExchangeData data : exchangeDatas) {
+            if(data.getName().equals("USDKRW=X")) {
+                return data.getRate();
+            }
+        }
+        return 0;
     }
 }
